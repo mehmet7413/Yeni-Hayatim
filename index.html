@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8" />
+    <title>Bizim Anılarımız</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- Üst Karşılama Alanı -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Anılarımız 💌</h1>
+            <p>
+                Bu siteyi senin için yaptım…  
+                Hayatımdaki en güzel anıların hepsinde sen varsın🧡💙
+            </p>
+
+            <button id="scrollGalleryBtn" class="btn">Anılarımıza Gidelim ✨</button>
+
+            <button id="musicBtn" class="btn secondary">🎵 Müzik Başlasın</button>
+            <audio id="bgMusic" loop>
+                <source src="music/love-437013.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </header>
+
+    <!-- Gizli sürpriz buton -->
+    <div class="secret-corner">
+        <button id="secretBtn">❤️</button>
+    </div>
+
+    <div id="secretMessage" class="secret-message hidden">
+        <div class="secret-box">
+            <h2>Mini Bir Sır…</h2>
+            <p>
+                Bu siteyi anılarımızı ölümsüzleştirmek için açtım
+                Anılarımız çoğaldıkça sitemiz de değişecek 🫶
+            </p>
+            <button id="closeSecret" class="btn small">Kapat</button>
+        </div>
+    </div>
+
+    <!-- ZAMAN TÜNELİ (Timeline) -->
+    <main id="gallery" class="timeline">
+
+        <!-- ÖRNEK 1 -->
+        <div class="memory">
+            <div class="memory-meta">
+                <span class="memory-date">· 10 Haziran - 17 Haziran 2022 · Birbirimizi ilk gördüğümüz yer</span>
+            </div>
+            <div class="memory-card">
+                <img src="images/ilkgörme.png" alt="İlk defa yanımdan geçtiğin yer" />
+                <p class="memory-text">
+                    Seni ilk defa gördüğüm an... 
+                    Daha birbirimizi tanımıyorduk bile ama
+                    ikimiz de bir şeyler hissetmiştik.
+                    Hissettiğimizi de anlamıştık sanki...
+                </p>
+            </div>
+        </div>
+
+        <!-- ÖRNEK 2 -->
+        <div class="memory">
+            <div class="memory-meta">
+                <span class="memory-date">· 20 Haziran - 25 Haziran 2022 · İlk fotoğrafımız</span>
+            </div>
+            <div class="memory-card">
+                <img src="images/ilkfoto.jpg" alt="Seninle fotoğraf serüvenimize ilk adımımız" />
+                <p class="memory-text">
+                    O gün hem kucağıma uzanmıştın hem de ilk fotoğrafımızı çekmiştik.  
+                    Snapchat filtreleriyle seninle uğraştığım ilk an.
+                </p>
+            </div>
+        </div>
+
+        <!-- ÖRNEK 3 -->
+        <div class="memory">
+            <div class="memory-meta">
+                <span class="memory-date">· Tarihi bulamadım :() · İlk halısaha maçımızı yapmıştık</span>
+            </div>
+            <div class="memory-card">
+                <img src="images/halısaha1.jpg" alt="İlk kez bugün halısaha yapmıştık" />
+                <p class="memory-text">
+                    O gün sahada seninle birlikte acayip eğlenmiştik.  
+                    Futbola olan yeteneğini anlatmaya kelimeler yetmez! Ama maalesef ki kaybetmiştik...
+                </p>
+            </div>
+        </div>
+
+        <!-- ÖRNEK 4 -->
+        <div class="memory">
+            <div class="memory-meta">
+                <span class="memory-date">· Tarihi bulamadım :() · Arkaplan fotomuz</span>
+            </div>
+            <div class="memory-card">
+                <img src="images/uzaylıgöz.jpg" alt="Arkaplan fotomuz" />
+                <p class="memory-text">
+                    Halısahanın yanında snapchatten bir sürü fotoğraf çekmiştik.
+                    Ama bu en iyisi olabilir. Senin de Whatsapp arkaplanın olmuştu hatırlıyor musun?
+                </p>
+            </div>
+        </div>
+
+        <div class="memory">
+            <div class="memory-meta">
+                <span class="memory-date">· 15 Temmuz 2023 · Kıvırcık aşkımın ekran görüntüsü</span>
+            </div>
+            <div class="memory-card">
+                <img src="images/kedikutusu.jpg" alt="Kedi kutusu" />
+                <p class="memory-text">
+                     Kedi çantası gösterdiğin videodan ekran görüntüsü almıştım.
+                     O anki şapşal suratın çok tatlıydı.
+                </p>
+            </div>
+        </div>
+
+        <div class="memory">
+            <div class="memory-meta">
+                <span class="memory-date">· 24 Ağustos 2023 · Görüntülü konuşurken birlikte saçmalayışımız</span>
+            </div>
+            <div class="memory-card">
+                <img src="images/görüntülüyüz.jpg" alt="Görüntülü konuşma" />
+                <p class="memory-text">
+                     Görmeli konuşurken hep yaptığın tatlı saçmalıklar var ya, işte onlardan biri.
+                </p>
+            </div>
+        </div>
+
+        <div class="memory">
+            <div class="memory-meta">
+                <span class="memory-date">· 5 Kasım 2023 · İlk kez ders çalışmaya gitmiştik</span>
+            </div>
+            <div class="memory-card">
+                <img src="images/ilkdersçalışma.jpg" alt="Ders çalışma" />
+                <p class="memory-text">
+                     İlk kez birlikte ders çalışmaya gitmiştik ama 
+                     güzel bi pizza gömmüştük.
+                </p>
+            </div>
+        </div>
+
+        <div class="memory">
+            <div class="memory-meta">
+                <span class="memory-date">· 25 Şubat 2024 · Ben otobüse binmeden önce son bi özlem gidermiştik</span>
+            </div>
+            <div class="memory-card">
+                <img src="images/gittiğimgün.jpg" alt="Otobüs öncesi özlem giderme" />
+                <p class="memory-text">
+                     Bugün de 4' te otobüsüm vardı, ne yapıp edip yanına gelmiştim
+                     beni çok güzel öperek uğurlamıştın. 
+                </p>
+            </div>
+        </div>
+
+        <div class="memory">
+            <div class="memory-meta">
+                <span class="memory-date">· 6 Mart · Kendi çabanla gitarı öğrenip bana şarkı çalığın gün</span>
+            </div>
+            <div class="memory-card">
+                <img src="images/ilkgitarşarkısı.jpg" alt="Gitarla şarkı" />
+                <p class="memory-text">
+                     Bu gece gitarla bana ilk şarkını çalmıştın.
+                     O anki mutluluğunu ve heyeacınını anlatamam ama gösterebilirim.
+                     Çok beğenmiştim.
+                </p>
+            </div>
+        </div>
+
+        <div class="memory">
+            <div class="memory-meta">
+                <span class="memory-date">· 24 Temmuz · Bana minik ellerinle kalpli kurabiye yapmtığın gün</span>
+            </div>
+            <div class="memory-card">
+                <img src="images/kurabiyevekelebek.jpg" alt="Kalpli kurabiye" />
+                <p class="memory-text">
+                    O gün bana minik ellerinle kalpli kurabiye yapmıştın.
+                    Sonra bi kelebek o güzel eline konmuştu. Çok huzur dolu bi fotoğraf.
+                    Kurabiye de çok güzeldi ama ha.
+                </p>
+            </div>
+        </div>
+
+        <div class="memory">
+            <div class="memory-meta">
+                <span class="memory-date">· 13 Eylül 2024 · Kocaman zurna yediğimiz günlerden biri</span>
+            </div>
+            <div class="memory-card">
+                <img src="images/zurnadürüm.jpg" alt="Zurna dürüm" />
+                <p class="memory-text">
+                    Bu gün de sen çok acıkmıştın biz de RTE' ye Hacızade' den
+                    kocaman zurna söyleyip gömmüştük. 
+                </p>
+            </div>
+        </div>
+
+        <div class="memory">
+            <div class="memory-meta">
+                <span class="memory-date">· 22 Ocak 2025 · Minecraft' ta bana çok tatlı gelen olaylardan biri</span>
+            </div>
+            <div class="memory-card">
+                <img src="images/mcdeve.jpg" alt="MC" />
+                <p class="memory-text">
+                    O gün Minecraft' ta deve bulmuştuk ve sana çok tatlı gelmişti.
+                    Üstüne binip gezmiştin. Acayip tatlı duruyon.
+                </p>
+            </div>
+        </div>
+
+        <div class="memory">
+            <div class="memory-meta">
+                <span class="memory-date">· 1 Mart 2025 · Erken gelen doğum günü sürprizi</span>
+            </div>
+            <div class="memory-card">
+                <img src="images/doğumgünü.jpg" alt="Doğum günü" />
+                <p class="memory-text">
+                    Sana belki de hayatının en güzel gününü yaşatmıştım.
+                    Fotoğrafta yüzünün nasıl şapşal gibi güldüğünden belli. Yerim seni.
+                </p>
+            </div>
+        </div>
+
+        <div class="memory">
+            <div class="memory-meta">
+                <span class="memory-date">· 15 Mayıs 2025 · Beraber olduğumuz ilk profil fotoğrafımız</span>
+            </div>
+            <div class="memory-card">
+                <img src="images/rtefoto.jpg" alt="RTE foto" />
+                <p class="memory-text">
+                    O gün sen çok çok güzel hazırlanmıştın önce yemek yemiştik
+                    sonra da RTE' ye gidip bu fotoğrafı çekmiştik. Sonra da ben
+                    bu fotoğrafı profil fotoğrafı yapmıştım. Hala da öyle :]
+                </p>
+            </div>
+        </div>
+
+        <!-- BURAYA İSTEDİĞİN KADAR YENİ MEMORY BLOĞU EKLEYECEKSİN -->
+    </main>
+
+    <!-- MEKTUPLAR -->
+    <section class="letters-section">
+        <h2>Sana Küçük Mektuplarım</h2>
+
+        <div class="letters-grid">
+            <div class="letter-card" data-letter="1">
+                <h3>Seni Neden Seviyorum?</h3>
+                <p>Tıklayınca göreceksin…</p>
+            </div>
+
+            <div class="letter-card" data-letter="2">
+                <h3>Seninle Gurur Duyduğum Şeyler</h3>
+                <p>Bunları okumanı istiyorum.</p>
+            </div>
+
+            <div class="letter-card" data-letter="3">
+                <h3>Mini Bir Teşekkür</h3>
+                <p>Bazen söylemeyi unutuyorum…</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mektup Modalı -->
+    <div id="letterModal" class="modal hidden">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2 id="letterTitle"></h2>
+            <p id="letterText"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

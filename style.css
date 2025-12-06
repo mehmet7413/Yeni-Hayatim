@@ -1,0 +1,239 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #fff7fb;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    background: radial-gradient(circle at top, #ffe0f0, #fff7fb);
+}
+
+.hero-content { max-width: 600px; }
+
+.hero h1 {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    margin-bottom: 1.5rem;
+}
+
+/* BUTTONS */
+.btn {
+    background: #ff7aa2;
+    color: white;
+    border: none;
+    border-radius: 999px;
+    padding: 0.7rem 1.4rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    margin: 0.25rem;
+    transition: 0.15s ease;
+    box-shadow: 0 8px 16px rgba(255, 122, 162, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn.secondary {
+    background: #f3b1ff;
+}
+
+.btn.small {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.85rem;
+}
+
+/* SECRET HEART */
+.secret-corner {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.secret-corner button {
+    background: transparent;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.secret-corner button:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+/* SECRET POPUP */
+.secret-message {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.hidden { display: none !important; }
+
+.secret-box {
+    background: #fff;
+    padding: 1.6rem;
+    border-radius: 1.2rem;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+/* TIMELINE */
+.timeline {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 1rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+}
+
+.memory {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.memory-meta { padding-left: 0.2rem; }
+
+.memory-date {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.memory-card {
+    background: #fff;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    border: 1px solid rgba(255, 170, 203, 0.4);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+    height: auto;      /* Kart sadece içerik kadar olsun */
+}
+
+
+
+
+.memory-card img {
+    width: 100%;
+    height: auto;           /* Foto orijinal oranıyla */
+    max-height: 60vh;       /* Çok dik foto olursa fazla büyümesin */
+    object-fit: contain;    /* Kesmesin */
+    background: #000;
+}
+
+
+
+.memory-text {
+    padding: 1rem 1.3rem 1.4rem;
+    font-size: 1rem;
+    color: #444;
+}
+
+.memory::before {
+    content: "";
+    position: absolute;
+    left: 0.2rem;
+    top: 0;
+    bottom: -2rem;
+    width: 2px;
+    background: linear-gradient(to bottom, #ffc3da, transparent);
+}
+
+.memory:first-child::before { top: 1rem; }
+
+/* LETTERS */
+.letters-section {
+    background: #ffeef9;
+    padding: 3rem 1rem 4rem;
+    text-align: center;
+}
+
+.letters-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.letters-grid {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.4rem;
+}
+
+.letter-card {
+    background: white;
+    padding: 1.4rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+    transition: 0.2s;
+}
+
+.letter-card:hover {
+    transform: translateY(-4px);
+}
+
+/* MODAL */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 1.2rem;
+    max-width: 500px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .hero h1 { font-size: 2.1rem; }
+    .memory-card img { max-height: 380px; }
+    .memory-text { font-size: 0.92rem; }
+}
